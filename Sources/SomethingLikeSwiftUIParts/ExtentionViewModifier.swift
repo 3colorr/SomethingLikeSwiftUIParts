@@ -2,7 +2,7 @@
 //  SwiftUIView.swift
 //  
 //
-//  Created by becomefoolish on 2022/04/28.
+//  Created by 3color on 2022/04/28.
 //
 
 import SwiftUI
