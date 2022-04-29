@@ -10,7 +10,7 @@ import SwiftUI
 struct AccordionModifier: ViewModifier {
     @Binding var isPresentAccordion: Bool
     
-    let note: String
+    let note: Text
     let closedImage: Image
     let openedImage: Image
     
@@ -36,7 +36,7 @@ struct AccordionModifier: ViewModifier {
             
             if isPresentAccordion {
                 Divider()
-                Text(note).padding()
+                note
             }
         }
     }
