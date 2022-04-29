@@ -10,7 +10,7 @@ import SwiftUI
 struct AccordionModifier: ViewModifier {
     @Binding var isPresentAccordion: Bool
     
-    let note: View
+    let note: Text
     let closedImage: Image
     let openedImage: Image
     
