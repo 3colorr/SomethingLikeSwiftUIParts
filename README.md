@@ -5,6 +5,7 @@ This is my test app Swift UI. You can refer to it if you needed.
 ## Contents
 View Extentions
 * Accordion
+* Banner
 
 ## Platform
 
@@ -19,11 +20,24 @@ View Extentions
 ## Usage
 
 ```swift
-Button(action: { isPresentAccordion1.toggle() }) {
-    Text("Accordion1")
-}
-.likeAccordion(isPresent: $isPresentAccordion1, body: Text("content1"))
+VStack {
+    // Usage Accordion
+    Button(action: { isPresentAccordion.toggle() }) {
+        Text("Accordion")
+    }
+    .likeAccordion(isPresent: $isPresentAccordion, body: Text("Hello Accordion"))
 
-Text("Accordion2")
-    .likeAccordion(isPresent: $isPresentAccordion2, body: Text("content2"), closedImage: Image(systemName: "circle"), openedImage: Image(systemName: "circle.fill"))
+    // Usage Accordion : others
+    Text("Accordion")
+        .likeAccordion(isPresent: $isPresentAccordion1, body: Text("Hello Accordion"), closedImage: Image(systemName: "circle"), openedImage: Image(systemName: "circle.fill"))
+
+    // Usage Banner
+    Button(action: { isPresentBanner.toggle() }) {
+        Text("Banner")
+    }
+}
+// Usage Banner
+.likeBanner(isPresent: $isPresentBanner, body: "Hello Banner")
+// Usage Banner : others
+//.likeBanner(isPresent: $isPresentBanner, body: "Hello Banner", shadowRadius: 5, type: .linear, direction: .bottom, duration: 5)
 ```

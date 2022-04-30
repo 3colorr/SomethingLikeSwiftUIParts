@@ -15,4 +15,12 @@ extension View {
     public func likeAccordion(isPresent: Binding<Bool>, body: Text, closedImage: Image = Image(systemName: "chevron.up"), openedImage: Image = Image(systemName: "chevron.down")) -> some View {
         modifier(AccordionModifier(isPresentAccordion: isPresent, note: body, closedImage: closedImage, openedImage: openedImage))
     }
+    
+    /**
+     Adds an Banner action to perform
+     */
+    public func likeBanner(isPresent: Binding<Bool>, body: String, shadowRadius: CGFloat = 5, type: Animation = .linear, direction: Edge = .top, duration: TimeInterval = 2) -> some View {
+        modifier(BannerModifier(isPresentView: isPresent, message: body, shadowRadius: shadowRadius, type: type, direction: direction, duration: duration))
+    }
+
 }
