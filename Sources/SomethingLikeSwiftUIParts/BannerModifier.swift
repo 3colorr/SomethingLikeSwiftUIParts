@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BannerModifier: ViewModifier {
     @Binding var isPresentView: Bool
-    let message: Text
+    let message: String
     let shadowRadius: CGFloat
     let type: Animation
     let direction: Edge
@@ -26,11 +26,12 @@ struct BannerModifier: ViewModifier {
                             Spacer()
                         }
                         
-                        message
+                        Text(message)
                             .font(.footnote)
                             .bold()
-                            .padding(.vertical, 20)
+                            .padding(.vertical, 10)
                             .padding(.horizontal, 40)
+                            .background(Capsule().fill(.white))
                         
                         if direction == .top {
                             Spacer()
